@@ -1,28 +1,19 @@
-<!DOCTYPE html>
 <html>
-<head>
- 
- 
-</head>
 <body>
-  <div class="container">
-    <h1>Defensive Security Project</h1>
-    <p>by: Adrian Davy</p>
-    <p>This week, you will work in groups to use the skills that you've learned in the Defensive Security unit and design a custom monitoring environment to protect a fictional organization, VSI. On Day 1, you'll use Splunk to research and design a monitoring solution for the fictional organization. On Day 2, you'll determine whether that monitoring solution will protect the organization from several simulated attacks. On Day 3, you'll showcase your defensive project with a group presentation to the class.</p>
-    <h2>Create a Monitoring Solution to Protect VSI</h2>
-    <p>Specifically, you will:</p>
-    <ul>
-      <li>Load and analyze Windows logs.</li>
-      <li>Create reports, alerts, and dashboards for the Windows logs.</li>
-      <li>Load and analyze Apache logs.</li>
-      <li>Create reports, alerts, and dashboards for the Apache logs.</li>
-      <li>Install an add-on Splunk application for additional monitoring.</li>
-    </ul>
-    <h2>Instructions</h2>
-    <ul>
-      <li>Today, you will play the role of an SOC analyst at a small company called Virtual Space Industries (VSI), which designs virtual-reality programs for businesses.</li>
-      <li>VSI has heard rumors that a competitor, JobeCorp, may launch cyberattacks to disrupt VSI’s business.</li>
-      <li>As an SOC analyst, you are tasked with using Splunk to monitor against potential attacks on your systems and applications.</li>
-      <li>The VSI products that you have been tasked with monitoring include:
-        <ul>
-          <li>An administrative webpage: <code>https://vsi-corporation.azurewebs
+  <h1 style="font-size: 18px; font-weight: bold; text-decoration: underline;">Part 1: Load and Analyze Windows Logs</h1>
+  <p>In this first part, you will upload and analyze Windows security logs that represent “regular” activity for VSI into your Splunk environment. To do so, complete the following steps:</p>
+  <ul style="list-style-type: none; padding: 0;">
+    <li style="font-size: 14px; margin: 10px 0;">Select the “Add Data” option within Splunk.</li>
+    <li style="font-size: 14px; margin: 10px 0;">Since you will upload the provided log file, select the “Upload” option under “Or get data in with the following methods.”</li>
+    <li style="font-size: 14px; margin: 10px 0;">Then, click “Select File.”</li>
+    <li style="font-size: 14px; margin: 10px 0;">Double-click the <code style="background-color: #eee; border-radius: 4px; padding: 2px 4px;">windows_server_logs.csv</code> file located in the <code style="background-color: #eee; border-radius: 4px; padding: 2px 4px;">/splunk/logs/Defensive-Project-Logs/</code> directory, as the following image shows:</li>
+    <li style="font-size: 14px; margin: 10px 0;">You will be brought to the “Set Source Type” page.</li>
+    <li style="font-size: 14px; margin: 10px 0;">You don't need to change any configurations on this page.</li>
+    <li style="font-size: 14px; margin: 10px 0;">Select “Next” again.</li>
+    <li style="font-size: 14px; margin: 10px 0;">You'll be brought to the “Input Settings” page.</li>
+    <li style="font-size: 14px; margin: 10px 0;">This page contains optional settings for how the data is input.</li>
+    <li style="font-size: 14px; margin: 10px 0;">In the “Host field value” field, Splunk uses a random value to name the machine or device that generated the logs.</li>
+    <li style="font-size: 14px; margin: 10px 0;">Update the value to “Windows_server_logs” and then select “Review.”</li>
+    <li style="font-size: 14px; margin: 10px 0;">On the “Review” page, verify that you've chosen the correct settings.</li>
+    <li style="font-size: 14px; margin: 10px 0;">Select “Submit” to proceed with uploading your data into Splunk.</li>
+    <li style="font-size: 14px; margin: 10px 0;">Once the file has successfully uploaded, a message that says “File
